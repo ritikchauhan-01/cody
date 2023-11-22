@@ -1,4 +1,4 @@
-// check if given substring is present in string.
+// leetcode - https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 
 class Solution {
     static int[] computeArray(String s){
