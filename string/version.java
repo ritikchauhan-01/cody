@@ -41,8 +41,6 @@ public class version {
         String s2 = "1.001";
 
         System.out.println(compareVersion(s1,s2));
-
-        
     }
 
 }
