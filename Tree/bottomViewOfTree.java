@@ -3,21 +3,6 @@
 package Tree;
 import java.util.*;
 
-class TreeNode {
-      int val;
-      int hd;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, int hd, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.hd=hd;
-          this.left = left;
-          this.right = right;
-    }
- }
-
 public class bottomViewOfTree {
 
     private static List<Integer> dfs(TreeNode root){
@@ -51,6 +36,21 @@ public class bottomViewOfTree {
 
     public List<Integer> bottomView(TreeNode root){
         return dfs(root);
+    }
+}
+
+class TreeNode {
+      int val;
+      int hd;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, int hd, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.hd=hd;
+          this.left = left;
+          this.right = right;
     }
 }
 

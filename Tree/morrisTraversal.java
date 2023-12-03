@@ -1,18 +1,6 @@
 package Tree;
 import java.util.*;
 
-class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-    }
-}
 
 // morris traversal for inorder , TC -> O(n) and SC -> O(1)
 public class morrisTraversal {
@@ -43,6 +31,20 @@ public class morrisTraversal {
         return inorder;
     }
 }
+
+class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+    }
+}
+
 
 // morris traversal for preorder , TC -> O(n) and SC -> O(1)
 
