@@ -1,8 +1,10 @@
+// Leetcode - https://leetcode.com/problems/maximum-width-of-binary-tree/
+
 package Tree;
 import java.util.*;
 
 class maxWidth {
-    public static int widthOfBinaryTree(TreeNode root){
+    static int widthOfBinaryTree(TreeNode root){
         if(root==null) return 0;
         int ans = 0;
         Queue<Pair> q = new LinkedList<>();
@@ -50,8 +52,8 @@ class TreeNode{
     TreeNode left, right;
     TreeNode(int val){
         this.val = val;
-        left = null;
-        right = null;
+        this.left = null;
+        this.right = null;
 
     }
 }

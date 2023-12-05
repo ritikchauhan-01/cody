@@ -74,6 +74,7 @@ public class allTraversal {
         }
         System.out.println();
     }
+    
 }
 
 class TreeNode {
