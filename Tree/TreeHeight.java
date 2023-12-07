@@ -1,5 +1,6 @@
-package Tree;
+// Leetcode - https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
+package Tree;
 public class TreeHeight {
 
     static int heightOfTree(TreeNode root){
@@ -7,6 +8,9 @@ public class TreeHeight {
 
         int left = heightOfTree(root.left);
         int right = heightOfTree(root.right);
+
+        if(left==-1|| right==-1) return  -1;
+        if(Math.abs(left-right)>1) return -1;
 
         return 1+ Math.max(left,right);
     }
@@ -21,8 +25,12 @@ public class TreeHeight {
         root.right.right = new TreeNode(4);
         root.right.right.right = new TreeNode(6);
       
-        int maxWidth = heightOfTree(root);
-        System.out.println("The maximum width of the Binary Tree is "+maxWidth);
+        int height = heightOfTree(root);
+
+        if(height==-1){
+            System.out.println("Tree is unbalanced");
+        }
+        else System.out.println("Tree is Balanced");
     
     }
     
