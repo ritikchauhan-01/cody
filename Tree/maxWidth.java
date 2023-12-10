@@ -64,6 +64,6 @@ class Pair{
     Pair(TreeNode node, int num){
         this.num = num;
         this.node = node;
-    }
+    }class LCA
 }
 
