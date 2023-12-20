@@ -17,18 +17,18 @@ public class SymmetricTree {
             return true;
         }
 
-        helper(root.left, root.right);
+        return helper(root.left, root.right);
     }
 
     public static void main(String args[]) {
 
-        Node  root = new Node(1);
-        root . left = new Node(2);
-        root . left . left = new Node(3);
-        root . left . right = new Node(4);
-        root . right = new Node(2);
-        root . right . left = new Node(4);
-        root . right . right = new Node(3);
+        TreeNode  root = new TreeNode(1);
+        root . left = new TreeNode(2);
+        root . left . left = new TreeNode(3);
+        root . left . right = new TreeNode(4);
+        root . right = new TreeNode(2);
+        root . right . left = new TreeNode(4);
+        root . right . right = new TreeNode(3);
       
         boolean res;
         res = isSymmetric(root);
@@ -36,7 +36,9 @@ public class SymmetricTree {
         if (res)
           System.out.println("The tree is symmetrical");
         else System.out.println("The tree is NOT symmetrical");
+    }
 }
+
 
 class TreeNode{
     int data;
