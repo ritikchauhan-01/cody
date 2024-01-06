@@ -1,4 +1,6 @@
-package DP;
+// Leetcode - https://leetcode.com/problems/longest-increasing-subsequence
+
+package DP.BoundedKnapsack;
 import java.util.*;
 
 public class LIS {
@@ -10,7 +12,7 @@ public class LIS {
 
         int add=0,not_add=0;
 
-        if(prev ==-1 || nums[curr]>nums[prev])
+        if(prev ==-1 || nums[curr]>nums[prev])   
             add = 1+recursion(nums,memo,curr+1,curr);
 
         not_add = 0+recursion(nums,memo,curr+1,prev);
@@ -33,7 +35,7 @@ public class LIS {
 
         int n = arr.length;
 
-        System.out.println("The length of the longest increasing subsequence is " + lengthOfLIS(arr, n));
+        System.out.println("The length of the longest increasing subsequence is " + lengthOfLIS(arr));
     }
 }
 
