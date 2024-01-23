@@ -1,16 +1,18 @@
-// Miniumum no of deletion and insertion to make s1 == s2
+// Minimum no.of deletion is a string to make it a pallindrome
 
 package DP.LCS;
 
-public class MinInsertionDeletionString {
+public class MinDeletionPallindromeString {
 
-    public static void minInsetionDeletionToConvert(String s1, String s2){
+    // min Deletion = length of string - LCS(s1,reverse(S1))
+    public static int minDeletionPallindromeString(String s1, String s2){
         int n = s1.length();
         int m = s2.length();
         int[][] dp = new int[n+1][m+1];
-
+        
         for(int i=0;i<n+1;i++)
             dp[i][0] = 0;
+
         for(int i=0;i<m+1;i++)
             dp[0][i] = 0;
 
@@ -22,21 +24,16 @@ public class MinInsertionDeletionString {
                     dp[i][j] = Math.max(dp[i-1][j],dp[i][j-1]);
             }
         }
-
-        // min Deletion => s1.length-LCS(s1,s2)
-        int deletion = n-dp[n][m];
         
-        // min insertion => s2.length-LCS(s1,s2)
-        int insertion = m-dp[n][m];
-
-        System.out.println("Min deletion: " + deletion);
-        System.out.println("Min Insetion: " + insertion);
-
+        return n-dp[n][m];    
     }
 
     public static void main(String[] args){
-        String s1 = "abcdef";
-        String s2 = "abdfg";
-        minInsetionDeletionToConvert(s1,s2);
+        String s1 = "abcba";
+        String s2 = "";
+        for(int i=0;i<s1.length();i++)
+            s2 = s1.charAt(i) + s2;
+        int len = minDeletionPallindromeString(s1,s2);
+        System.out.println("length of longest pallindromic subsequence: "+ len);
     }
 }
